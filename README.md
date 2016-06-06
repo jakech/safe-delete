@@ -2,7 +2,7 @@
 
 ##STOP USING `rm` to delete your files! Safely move your files to the trash instead using `safe-delete`.
 
-***Remove aka `rm` aka you like to live dangerously aka you just pulled a `rm -rf /*` instead of `rm -rf ./\*`. ***
+*** Remove aka `rm` aka you like to live dangerously aka you just pulled a `rm -rf /*` instead of `rm -rf ./\*` ***
 
 ***Move to Trash aka `safe-delete` aka You should have been more careful.***
 
