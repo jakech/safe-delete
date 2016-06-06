@@ -9,7 +9,7 @@
 ***PRESENT:*** Move to Trash aka `safe-delete` aka You should be more careful!
 
 
-***The choice is yours***
+***The choice is yours:***
 
 <table>
   <tr>
