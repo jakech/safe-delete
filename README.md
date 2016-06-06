@@ -14,4 +14,12 @@ safe-delete temporaryDir
 safe-delete -trash
 Are you sure you want to permanently delete the trash? (yes/no): yes
 
+# Aliases for safe-delete
+# del = delete = safe-delete
+
+# Use safe-delete to be verbose
+# Use delete to be specific
+# Use del to be short
+# What good fun life can be
+
 ```
