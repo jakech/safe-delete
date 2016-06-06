@@ -6,4 +6,12 @@
 ```
 # Install Globally
 sudo npm install -g safe-delete
+
+# Move a directory to the trash
+safe-delete temporaryDir
+
+# Empty the trash with the -t or -trash flag
+safe-delete -trash
+Are you sure you want to permanently delete the trash? (yes/no): yes
+
 ```
