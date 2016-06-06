@@ -1,6 +1,6 @@
 {
   "name": "safe-delete",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "STOP USING `rm`! Safely move to the trash with `safe-delete`.",
   "main": "bin/safe-delete",
   "scripts": {
