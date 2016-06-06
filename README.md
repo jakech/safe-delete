@@ -18,10 +18,10 @@
     <th>Safe-Delete</th>
   <tr>
   <tr>
-    <td><img src="" height="200px" width="200px"></td>
-    <td><img src="" height="200px" width="200px"></td>
+    <td><img src="https://raw.githubusercontent.com/louisbuchbinder/safe-delete/master/images/guillotine.png" height="200px" width="200px"></td>
+    <td></td>
+    <td><img src="https://raw.githubusercontent.com/louisbuchbinder/safe-delete/master/images/trashcan.jpg" height="200px" width="200px"></td>
   </tr>
-
 </table>
 
 
