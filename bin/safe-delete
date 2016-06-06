@@ -1,0 +1,43 @@
+#!/bin/bash
+
+if [[ $1 = "-trash" ]] || [[ $1 = "-t" ]] 
+then 
+  while true 
+  do read -p "Are you sure you want to permanently delete the trash? (yes/no): " yn 
+    case $yn in  
+      [Yy]* ) break;; 
+      [Nn]* ) echo "Aborted the operation"; exit 0;; 
+      * ) echo "Please answer yes or no. Do you want to permanently delete the trash? (yes/no)";; 
+    esac 
+  done
+
+  rm -rf ~/.Trash/*; exit 0; 
+fi 
+if [[ $@ = *"*"* ]] || [[ $@ = "." ]]; then echo "exited operation"; exit 1; fi
+
+for var in "$@"
+# for each argument move the file or directory to the trash
+do
+  filename=${var##*/}
+  name=$filename
+  if [[ -f $filename ]] || [[ -d $filename ]]
+  # does the proposed file exist?
+  then
+    if [[ -f ~/.Trash/$var ]] || [[ -d ~/.Trash/$var ]]
+    # if the file or directory already exists in the trash then append the filename with a count
+    then 
+      bool=true; count=0
+      while [ $bool = true ]
+      do
+        count=$(( $count + 1 ))
+        name=$filename"-"$count
+        if [[ ! -f ~/.Trash/$name ]] &&  [[ ! -d ~/.Trash/$name ]]; then bool=false; fi
+        # if the new name is unique in the trash then break the while loop
+      done
+    fi
+
+    mv -f $var ~/.Trash/$name
+  else
+    echo $var" was not found."; exit 1;
+  fi
+done

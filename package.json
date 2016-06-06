@@ -1,0 +1,34 @@
+{
+  "name": "safe-delete",
+  "version": "1.0.0",
+  "description": "STOP USING `rm`! Safely move to the trash with `safe-delete`.",
+  "main": "bin/safe-delete",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louisbuchbinder/safe-delete.git"
+  },
+  "bin":{
+    "safe-delete": "bin/safe-delete",
+    "delete": "bin/safe-delete",
+    "del": "bin/safe-delete"
+  }, 
+  "keywords": [
+    "move",
+    "to",
+    "trash",
+    "bash",
+    "rm",
+    "alternative",
+    "safe",
+    "delete"
+  ],
+  "author": "Louis Buchbinder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/louisbuchbinder/safe-delete/issues"
+  },
+  "homepage": "https://github.com/louisbuchbinder/safe-delete#readme"
+}
