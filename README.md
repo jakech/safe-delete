@@ -2,11 +2,11 @@
 
 ##STOP USING `rm` to delete your files! Safely move your files to the trash instead using `safe-delete`.
 
-***`rm` aka you like to live dangerously aka you just pulled a `rm -rf /* ` instead of `rm -rf ./* `.
+***`rm` aka you like to live dangerously aka you just pulled a `rm -rf /*` instead of `rm -rf ./*`.***
 
-***`safe-delete` aka You should have been more careful.
+***`safe-delete` aka You should have been more careful.***
 
-***"You mean it's gone forever..."
+***"You mean it's gone forever..."***
 
 ```
 # Install Globally
