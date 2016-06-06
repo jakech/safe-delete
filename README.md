@@ -11,7 +11,7 @@
 
 ***The choice is yours:***
 
-<table style="text-align:center;">
+<table>
   <tr>
     <th>Remove</th>
     <th>or</th>
