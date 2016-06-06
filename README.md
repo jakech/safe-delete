@@ -2,7 +2,7 @@
 
 ##STOP USING `rm` to delete your files! Safely move your files to the trash instead using `safe-delete`.
 
-PAST: Remove aka `rm` aka you like to live dangerously aka you just pulled a `rm -rf /*` instead of `rm -rf ./\*`
+PAST: Remove aka `rm` aka you like to live dangerously aka you just pulled a `rm -rf /*` instead of `rm -rf ./*`
 
 ***"You mean it's gone forever..."***
 
