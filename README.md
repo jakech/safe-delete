@@ -9,6 +9,23 @@
 ***PRESENT:*** Move to Trash aka `safe-delete` aka You should be more careful!
 
 
+***The choice is yours***
+
+<table>
+  <tr>
+    <th>Remove</th>
+    <th>or</th>
+    <th>Safe-Delete</th>
+  <tr>
+  <tr>
+    <td><img src="" height="200px" width="200px"></td>
+    <td><img src="" height="200px" width="200px"></td>
+  </tr>
+
+</table>
+
+
+
 ```
 # Install Globally
 sudo npm install -g safe-delete
