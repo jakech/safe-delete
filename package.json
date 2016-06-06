@@ -1,6 +1,6 @@
 {
   "name": "safe-delete",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "STOP USING Remove! Safely move to the trash with Safe Delete.",
   "main": "bin/safe-delete",
   "scripts": {
