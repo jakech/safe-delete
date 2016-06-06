@@ -1,7 +1,7 @@
 {
   "name": "safe-delete",
   "version": "1.0.2",
-  "description": "STOP USING `rm`! Safely move to the trash with `safe-delete`.",
+  "description": "STOP USING Remove! Safely move to the trash with Safe Delete.",
   "main": "bin/safe-delete",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
