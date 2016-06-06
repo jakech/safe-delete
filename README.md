@@ -25,7 +25,7 @@
 </table>
 
 
-
+###In your terminal
 ```
 # Install Globally
 sudo npm install -g safe-delete
