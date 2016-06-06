@@ -20,7 +20,7 @@ for var in "$@"
 do
   filename=${var##*/}
   name=$filename
-  if [[ -f $filename ]] || [[ -d $filename ]]
+  if [[ -f $var ]] || [[ -d $var ]]
   # does the proposed file exist?
   then
     if [[ -f ~/.Trash/$var ]] || [[ -d ~/.Trash/$var ]]
