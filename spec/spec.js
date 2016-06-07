@@ -27,14 +27,14 @@ describe('safe-delete tests', () => {
   });
 
   afterEach((done) => {
-    execute('echo "yes" | safe-delete -t; safe-delete temp-trash/*; rm -r temp-trash;')
+    execute('echo "yes" | ./bin/safe-delete -t; ./bin/safe-delete temp-trash/*; rm -r temp-trash;')
     .then(() => done());
   });
 
   it('should delete a file', () => {
     return expect(
       execute('touch test.txt')
-      .then(() => execute('if [[ -f test.txt ]]; then safe-delete test.txt; if [[ ! -f test.txt ]]; then printf "true"; else printf "false"; fi; else printf "false"; fi;'))
+      .then(() => execute('if [[ -f test.txt ]]; then ./bin/safe-delete test.txt; if [[ ! -f test.txt ]]; then printf "true"; else printf "false"; fi; else printf "false"; fi;'))
     ).to.eventually.equal('true');
   });
 
@@ -43,9 +43,9 @@ describe('safe-delete tests', () => {
       execute('mkdir test test1; touch test1/test.txt')
       // delete an empty directory then delete a non-empty directory
       .then(() => execute(
-        'if [[ -d test ]]; then safe-delete test; if [[ ! -d test ]]; then printf "true"; else printf "false"; fi; else printf "false"; fi; ' +
+        'if [[ -d test ]]; then ./bin/safe-delete test; if [[ ! -d test ]]; then printf "true"; else printf "false"; fi; else printf "false"; fi; ' +
         'printf "\n"; ' +
-        'if [[ -d test1 ]]; then safe-delete test1; if [[ ! -d test1 ]]; then printf "true"; else printf "false"; fi; else printf "false"; fi; '
+        'if [[ -d test1 ]]; then ./bin/safe-delete test1; if [[ ! -d test1 ]]; then printf "true"; else printf "false"; fi; else printf "false"; fi; '
       ))
     ).to.eventually.equal('true\ntrue');
   });
@@ -55,9 +55,9 @@ describe('safe-delete tests', () => {
       execute('mkdir test; touch test/test.txt test/test1.txt test/test2.txt')
       .then(() => execute(
         'if [[ -d test ]] && [[ -f test/test.txt ]] && [[ -f test/test1.txt ]] && [[ -f test/test2.txt ]]; ' + 
-          'then safe-delete test/*; ' + // this should delete all the files within the test directory, but leave the test directory
+          'then ./bin/safe-delete test/*; ' + // this should delete all the files within the test directory, but leave the test directory
           'if [[ -d test ]] && [[ ! -f test/test.txt ]] && [[ ! -f test/test1.txt ]] && [[ ! -f test/test2.txt ]]; ' +
-            'then printf "true"; del test; ' + 
+            'then printf "true"; ./bin/safe-delete test; ' + 
             ' else printf "false1"; ' + 
             ' fi; ' +
           'else printf "false2"; ' +
@@ -68,10 +68,10 @@ describe('safe-delete tests', () => {
 
   it('should empty the trash', function() {
     return expect(
-      execute('mkdir test; touch test/test.txt; safe-delete test;')
+      execute('mkdir test; touch test/test.txt; ./bin/safe-delete test;')
       .then(() => execute(
         'if [[ -d ~/.Trash/test ]] && [[ -f ~/.Trash/test/test.txt ]]; ' +
-          'then printf "yes" | safe-delete -trash; ' +
+          'then printf "yes" | ./bin/safe-delete -trash; ' +
           'if [[ ! -d ~/.Trash/test ]] && [[ ! -f ~/.Trash/test/test.txt ]]; ' +
             'then printf "true"; ' +
             'else printf "false"; ' +
@@ -82,3 +82,4 @@ describe('safe-delete tests', () => {
     ).to.eventually.equal('true');
   });
 });
+

@@ -35,8 +35,9 @@ do
         # if the new name is unique in the trash then break the while loop
       done
     fi
-
+    
     mv -f $var ~/.Trash/$name
+
   else
     echo $var" was not found."; exit 1;
   fi
