@@ -35,10 +35,12 @@ do
         # if the new name is unique in the trash then break the while loop
       done
     fi
+    
+    mv -f $var ~/.Trash/$name
 
-    if [ -L $var  ]; 
-    then mv -f "`readlink $var`" ~/.Trash/$name && mv -f "$var" ~/.Trash/$name; 
-    fi
+    # if [ -L $var  ]; 
+    # then mv -f "`readlink $var`" ~/.Trash/$name;
+    # fi
     # follow symlinks
   else
     echo $var" was not found."; exit 1;
