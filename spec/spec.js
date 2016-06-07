@@ -65,7 +65,9 @@ describe('safe-delete tests', () => {
       ))
     ).to.eventually.equal('true');
   });
-
+  
+  xit('should follow symlinks');
+  
   it('should empty the trash', function() {
     return expect(
       execute('mkdir test; touch test/test.txt; safe-delete test;')
