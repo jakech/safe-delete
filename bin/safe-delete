@@ -36,11 +36,11 @@ do
       done
     fi
     
-    if [ -L $var  ]; 
-    then 
-      mv -f "`readlink $var`" ~/.Trash/$name;
+    if [[ -L $var ]] && [[ -f "`readlink $var`" ]] 
+    then
+      mv -f "`readlink $var`" ~/.Trash/$name
+      # follow symlinks
     fi
-    # follow symlinks
 
     mv -f $var ~/.Trash/$name
   else
